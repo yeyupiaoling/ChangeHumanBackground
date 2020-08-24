@@ -75,10 +75,14 @@ public class MainActivity extends AppCompatActivity {
         selectBackground.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 打开相册
-                Intent intent = new Intent(Intent.ACTION_PICK);
-                intent.setType("image/*");
-                startActivityForResult(intent, 1);
+                if (resultPicture != null){
+                    // 打开相册
+                    Intent intent = new Intent(Intent.ACTION_PICK);
+                    intent.setType("image/*");
+                    startActivityForResult(intent, 1);
+                }else {
+                    Toast.makeText(MainActivity.this, "先选择人物图片！", Toast.LENGTH_SHORT).show();
+                }
             }
         });
         savePicture.setOnClickListener(new View.OnClickListener() {

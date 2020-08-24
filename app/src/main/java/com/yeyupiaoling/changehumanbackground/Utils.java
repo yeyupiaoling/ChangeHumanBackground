@@ -124,7 +124,7 @@ public class Utils {
             fos.flush();
             fos.close();
             return file.getAbsolutePath();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
