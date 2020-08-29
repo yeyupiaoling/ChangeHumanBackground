@@ -182,7 +182,6 @@ public class MainActivity extends AppCompatActivity {
 
     // 合并两张图片
     public static Bitmap mergeBitmap(Bitmap backBitmap, Bitmap frontBitmap) {
-        Utils.saveBitmap(frontBitmap);
         Bitmap bitmap = backBitmap.copy(Bitmap.Config.ARGB_8888, true);
         Canvas canvas = new Canvas(bitmap);
         Rect baseRect = new Rect(0, 0, backBitmap.getWidth(), backBitmap.getHeight());
