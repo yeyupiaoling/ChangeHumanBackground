@@ -1,15 +1,9 @@
 # ChangeHumanBackground
 人物更换背景
 
-> 原文博客：[Doi技术团队](http://blog.doiduoyi.com)<br/>
-> 链接地址：[https://blog.doiduoyi.com/authors/1584446358138](https://blog.doiduoyi.com/authors/1584446358138)<br/>
-> 初心：记录优秀的Doi技术团队学习经历<br/>
->本文链接：[Android基于图像语义分割实现人物背景更换](https://blog.doiduoyi.com/articles/1598712095900.html)<br/>
-
 
 本教程是通过PaddlePaddle的PaddleSeg实现的，该开源库的地址为：[http://github.com/PaddlPaddle/PaddleSeg](http://github.com/PaddlPaddle/PaddleSeg) ，使用开源库提供的预训练模型实现人物的图像语义分割，最终部署到Android应用上。关于如何在Android应用上使用PaddlePaddle模型，可以参考笔者的这篇文章[《基于Paddle Lite在Android手机上实现图像分类》](https://blog.doiduoyi.com/articles/1596345808188.html)。
 
-**本教程开源代码地址：[https://github.com/yeyupiaoling/ChangeHumanBackground](https://github.com/yeyupiaoling/ChangeHumanBackground)**
 
 # 图像语义分割工具
 首先编写一个可以在Android应用使用PaddlePaddle的图像语义分割模型的工具类，通过是这个`PaddleLiteSegmentation`这个java工具类实现模型的加载和图像的预测。
